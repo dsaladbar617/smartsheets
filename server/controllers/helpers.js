@@ -28,7 +28,7 @@ const requestCurrentUser = async (id, res) => {
     .then((data) => data);
     // console.log(id);
     // console.log(returnData)
-   if (returnData[0] === []) {
+   if (returnData[0].length === 0) {
     res.status(401).send('Unauthorized')
    }
    return returnData
